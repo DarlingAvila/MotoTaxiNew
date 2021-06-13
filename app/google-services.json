@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "195706836555",
+    "project_id": "mototaxis-9d523",
+    "storage_bucket": "mototaxis-9d523.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195706836555:android:f7fa416f2dcab138de5fce",
+        "android_client_info": {
+          "package_name": "com.darling.mototaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195706836555-earmlpdal36cuuov41214mgk8rcf7sg9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darling.mototaxi",
+            "certificate_hash": "ee81263f6fa3c927495a8fbb48d0ef3c0d6519eb"
+          }
+        },
+        {
+          "client_id": "195706836555-qu8d3fakmhi6pdbum0r9qq3n81bilaeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx8w3bY4gxZUdLE0ZyLBVHQxmOpoVwO1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195706836555-qu8d3fakmhi6pdbum0r9qq3n81bilaeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
