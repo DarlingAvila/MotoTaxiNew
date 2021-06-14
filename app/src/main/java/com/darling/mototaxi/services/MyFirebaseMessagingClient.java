@@ -33,7 +33,7 @@ public class MyFirebaseMessagingClient extends FirebaseMessagingService {
         String body = data.get("body");
 
         if (title != null){
-            if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
                 showNotificationApiOreo(title, body);
             }
             else {
@@ -46,7 +46,7 @@ public class MyFirebaseMessagingClient extends FirebaseMessagingService {
 
     private void showNotification(String title, String body) {
 
-        PendingIntent intent = PendingIntent. getActivities(getBaseContext(), 0, new Intent[]{new Intent()}, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent intent = PendingIntent.getActivity(getBaseContext(), 0, new Intent(), PendingIntent.FLAG_ONE_SHOT);
         Uri sound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificacionHelper notificacionHelper = new NotificacionHelper(getBaseContext());
         NotificationCompat.Builder builder = notificacionHelper.getNotificationOlAPI(title, body, intent, sound);
@@ -56,8 +56,7 @@ public class MyFirebaseMessagingClient extends FirebaseMessagingService {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void showNotificationApiOreo(String title, String body) {
-
-        PendingIntent intent = PendingIntent. getActivities(getBaseContext(), 0, new Intent[]{new Intent()}, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent intent = PendingIntent.getActivity(getBaseContext(), 0, new Intent(), PendingIntent.FLAG_ONE_SHOT);
         Uri sound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificacionHelper notificacionHelper = new NotificacionHelper(getBaseContext());
         Notification.Builder builder = notificacionHelper.getNotification(title, body, intent, sound);

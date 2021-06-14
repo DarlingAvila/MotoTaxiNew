@@ -32,6 +32,7 @@ public class NotificacionHelper extends ContextWrapper {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
+
     private  void createChannels(){
 
         NotificationChannel notificationChannel = new
@@ -47,8 +48,8 @@ public class NotificacionHelper extends ContextWrapper {
         notificationChannel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
         getManager().createNotificationChannel(notificationChannel);
     }
-
-    public   NotificationManager getManager(){
+//dudas
+    public NotificationManager getManager(){
         if (manager == null){
             manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         }
@@ -65,7 +66,6 @@ public class NotificacionHelper extends ContextWrapper {
                 .setContentIntent(intent)
                 .setSmallIcon(R.drawable.ic_car);
     }
-
     public NotificationCompat.Builder getNotificationOlAPI(String title, String body, PendingIntent intent, Uri soundUri){
         return  new NotificationCompat.Builder(getApplicationContext(),CHANNEL_ID)
                 .setContentTitle(title)

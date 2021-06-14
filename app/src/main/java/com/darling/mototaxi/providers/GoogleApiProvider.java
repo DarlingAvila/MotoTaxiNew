@@ -27,7 +27,7 @@ public class GoogleApiProvider {
                 + "destination=" + destinationLatLng.latitude + "," + destinationLatLng.longitude + "&"
                 + "departure_time=" + (new Date().getTime() + (60*60*1000)) + "&"
                 + "traffic_model=best_guess&"
-                + "key=" + context.getResources().getString(R.string.google_maps_key);
-        return RetrofitClient.getClent(baseUrl).create(IGoogleApi.class).getDirection(baseUrl + query);
+                + "key=AIzaSyCCMR9UC4svCug3p_AieMMQWj95pEzjvFw" + context.getResources().getString(R.string.google_maps_key);
+        return RetrofitClient.getClient(baseUrl).create(IGoogleApi.class).getDirection(baseUrl + query);
     }
 }
